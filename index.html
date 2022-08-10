@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="scss/style.css" />
-    <script src="js/script.js"></script>
+    
     
     <title>Document</title>
 </head>
@@ -45,7 +45,8 @@
                     <div class="first-screen__descript"><p>We Make international calling simple, relible, and cheap basedon your unique calling behavior.</p></div>
                     <button class="header__button scnd">Get Started</button>
                     <div class="search">
-                        <input class="search-input" type="text" placeholder="Where do you want to call?">
+                        <input maxLength = "13" minlength="5" class="search-input" id="input" type="text" placeholder="Where do you want to call?">
+                        <p class="err" id="error" hidden></p>
                         <div class="icon">
                             <img src="/media/search.svg" alt="" class="icon-img">
                         </div>
@@ -56,19 +57,19 @@
                     <div class="big-circle-box">
                         <div class="inner-circle"></div>
                     <div class="big-circle">
+                        <div class="flag india-left ">
+                            <img src="/media/India.svg" alt="" class="flag-img sm">
+                        </div>
                         <div class="flag british">
                             <img src="/media/british.svg" alt="" class="flag-img">
                         </div>
                         <div class="flag italy">
                             <img src="/media/Italy.svg" alt="" class="flag-img">
                         </div>
-                        <div class="flag india ">
+                        <div class="flag india">
                             <img src="/media/India.svg" alt="" class="flag-img">
                         </div>
-                        <div class="flag india-right ">
-                            <img src="/media/India.svg" alt="" class="flag-img sm">
-                        </div>
-                        <div class="flag india-left ">
+                        <div class="flag india-right">
                             <img src="/media/India.svg" alt="" class="flag-img sm">
                         </div>
                         
@@ -81,6 +82,6 @@
             </div>
     </div>
     </div>
-    
+    <script src="js/script.js"></script>
 </body>
 </html>

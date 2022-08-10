@@ -11,6 +11,7 @@ body{
 }
 
 .wrapper{
+   padding: 0px 20px;
    width: 100%;
    height: 100%;
    overflow-x: hidden;
@@ -129,6 +130,8 @@ body{
       ::placeholder{
          color: #A1A1A1;
       }
+
+      
       }
 
       .icon{
@@ -148,6 +151,15 @@ body{
       .icon-img{
          width: 25px;
       }
+   }
+
+   .err{
+      color: red;
+      margin-top: 10px;
+   }
+
+   .error{
+      background: red;
    }
 
    .scnd{
@@ -174,7 +186,11 @@ body{
          height: 450px;
          border: solid #E8E8E8 2px;
          border-radius: 50%;
-         transform: rotate(0deg) ;
+         transition: all 2000s linear;
+      }
+
+      .big-circle._active{
+         transform: rotate(35180deg) ;
       }
 
       .flag{
@@ -187,6 +203,7 @@ body{
       .flag._active{
          transform: translate(0%, 0%);
       }
+      
 
       .italy{
          top: -11%;
@@ -243,3 +260,5 @@ body{
       }
    }
 }
+
+
