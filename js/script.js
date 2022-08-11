@@ -63,3 +63,30 @@ function checkCodeLength(){
 
    }
 }
+
+
+//mobile menu
+
+const burgerBtn = document.querySelector('.header__burger');
+const menu = document.querySelector('.header__nav-row');
+
+burgerBtn.addEventListener('click', toggleMenu);
+
+function burgerOpen(){
+menu.classList.add('_active')
+document.body.style.overflow = 'hidden'
+}
+
+function burgerClose(){
+   menu.classList.remove('_active')
+   document.body.style.overflow = 'auto'
+   }
+
+   function toggleMenu(e){
+      if (menu.classList.contains('_active')) {
+         burgerClose()
+      } else {
+         menu.style.opacity = 1
+         burgerOpen()
+      } 
+   }

@@ -103,10 +103,16 @@ body {
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-top: 30px;
+}
+.header .mob {
+  display: none;
+}
+.header__nav-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .header__menu {
   position: relative;
@@ -139,6 +145,19 @@ body {
   border-radius: 20px;
   color: white;
   background: #48B774;
+}
+.header__burger {
+  width: 40px;
+  height: 30px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.header .burger-line {
+  width: 100%;
+  height: 3px;
+  background-color: #2D2D2D;
 }
 
 .first-screen {
@@ -291,4 +310,189 @@ body {
   bottom: -44px;
   right: 20%;
   z-index: 10;
+}
+
+@media (max-width: 992px) {
+  .first-screen .big-circle {
+    width: 350px;
+    height: 350px;
+  }
+  .first-screen .inner-circle {
+    width: 210px;
+    height: 210px;
+  }
+  .first-screen .women {
+    position: absolute;
+    bottom: -44px;
+    right: 20%;
+    z-index: 10;
+  }
+  .first-screen .women .women-img {
+    width: 220px;
+  }
+  .first-screen .italy {
+    top: -13%;
+    transform: translate(0px, 100%);
+  }
+  .first-screen .british {
+    top: 11%;
+    left: -14%;
+    transform: translate(100%, 100%);
+  }
+  .first-screen .india {
+    top: 9%;
+    right: -11%;
+    transform: translate(-100%, 100%);
+  }
+  .first-screen .india-right {
+    top: 52%;
+    right: -12%;
+    width: 90px;
+    transform: translate(-140%, 0%);
+  }
+  .first-screen .india-left {
+    top: 52%;
+    left: -12%;
+    width: 90px;
+    transform: translate(140%, 0%);
+  }
+}
+@media (max-width: 768px) {
+  .first-screen {
+    flex-wrap: wrap;
+  }
+  .first-screen__title {
+    font-size: 58px;
+  }
+  .first-screen__grafic {
+    display: none;
+  }
+}
+@media (max-width: 568px) {
+  .header__menu {
+    gap: 15px;
+  }
+  .first-screen {
+    flex-wrap: wrap;
+  }
+  .first-screen__title {
+    font-size: 48px;
+  }
+  .first-screen__descript {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 478px) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header__logo {
+    display: none;
+  }
+  .header .mob {
+    display: block;
+  }
+  .header__nav-row {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    height: 100%;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding: 30px;
+    background-color: #ffffff;
+    opacity: 0;
+    transform: translate(0, -100%);
+    transition: all 0.5s ease;
+  }
+  .header__nav-row._active {
+    opacity: 1;
+    transform: translate(0, 0%);
+  }
+  .header__menu {
+    flex-direction: column;
+    align-items: start;
+    top: 0;
+  }
+  .header__link {
+    font-size: 35px;
+  }
+  .header__button {
+    margin-top: 40px;
+    font-size: 25px;
+    height: 60px;
+    border-radius: 50px;
+  }
+  .header__burger {
+    display: flex;
+    position: relative;
+    z-index: 101;
+  }
+  .header__line {
+    display: none;
+  }
+  .first-screen {
+    flex-wrap: wrap;
+  }
+  .first-screen__title {
+    font-size: 48px;
+  }
+  .first-screen__descript {
+    margin-bottom: 40px;
+  }
+  .first-screen .scnd {
+    display: flex;
+  }
+  .first-screen__grafic {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+  }
+  .first-screen__grafic .big-circle {
+    width: 320px;
+    height: 320px;
+  }
+  .first-screen__grafic .inner-circle {
+    width: 180px;
+    height: 180px;
+    left: 23%;
+  }
+  .first-screen__grafic .women {
+    right: auto;
+    bottom: -5px;
+  }
+  .first-screen__grafic .women .women-img {
+    width: 180px;
+  }
+  .first-screen__grafic .italy {
+    top: -15%;
+    transform: translate(0px, 100%);
+  }
+  .first-screen__grafic .british {
+    top: 10%;
+    left: -16%;
+    transform: translate(100%, 100%);
+  }
+  .first-screen__grafic .india {
+    top: 8%;
+    right: -13%;
+    transform: translate(-100%, 100%);
+  }
+  .first-screen__grafic .india-right {
+    top: 52%;
+    right: -12%;
+    width: 90px;
+    transform: translate(-140%, 0%);
+  }
+  .first-screen__grafic .india-left {
+    top: 52%;
+    left: -12%;
+    width: 90px;
+    transform: translate(140%, 0%);
+  }
 }/*# sourceMappingURL=style.css.map */
